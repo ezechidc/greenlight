@@ -1,0 +1,35 @@
+# Binaries for programs
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+*.test
+
+# Go coverage output
+*.out
+
+# Dependency directories (uncomment to include vendor/ directory)
+# vendor/
+
+# IDE-specific files (examples for common IDEs)
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Environment variables
+.env
+.env.local
+
+# Log files
+*.log
+
+# Build output directories (if not in current directory)
+bin/
+pkg/
+
+# Other temporary files
+*~

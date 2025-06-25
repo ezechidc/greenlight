@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:17
+    container_name: postgres-greenlight
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: greenlight
+      POSTGRES_PASSWORD: pa55word
+      POSTGRES_DB: greenlight
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+      - ./postgresql.conf:/etc/postgresql/postgresql.conf
+    command: ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
